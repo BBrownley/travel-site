@@ -9,7 +9,8 @@ const
   postcss = require("gulp-postcss"),
   autoprefixer = require("autoprefixer"),
   cssvars = require("postcss-simple-vars"),
-  nested = require("postcss-nested");
+  nested = require("postcss-nested"),
+  cssImport = require("postcss-import");
 
 gulp.task("default", function() {
   //entering gulp in command line will run the default task
@@ -26,8 +27,10 @@ gulp.task("styles", function() {
 
   //Be careful how these lines are spaced out - It could cause errors
 
+  //cssImport should be the first task
+
   return gulp.src('./app/assets/styles/styles.css')
-  .pipe(postcss([cssvars, autoprefixer, nested]))
+  .pipe(postcss([cssImport, cssvars, autoprefixer, nested]))
   .pipe(gulp.dest('./app/temp/styles'));
 
   /*
