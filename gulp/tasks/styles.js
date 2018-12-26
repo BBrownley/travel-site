@@ -14,6 +14,15 @@ gulp.task("styles", function() {
 
   return gulp.src('./app/assets/styles/styles.css')
   .pipe(postcss([cssImport, cssvars, autoprefixer, nested]))
+
+  //We must throw an error before the function ends
+
+  .on("error", function(errorInfo) {
+    console.log(errorInfo.toString());
+    this.emit("end"); //The watch task wants to know when these tasks end, hence the .emit("end")
+                      //It will just see that the task ended, like it normally would
+  })
+
   .pipe(gulp.dest('./app/temp/styles'));
 
   /*
