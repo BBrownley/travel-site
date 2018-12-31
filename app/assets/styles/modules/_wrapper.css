@@ -4,6 +4,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden; /* Keeps protruding parts of elements hidden if they occur
+  This is useful if you want to use negative margins (e.g. manipulating column layouts)*/
 
   &--medium {
     max-width: 976px;

@@ -7,3 +7,7 @@ img {
   max-width: 100%; /* Prevents images from taking up more than the width of the browser */
   height: auto;
 }
+
+* {
+  box-sizing: border-box;
+}

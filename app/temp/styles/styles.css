@@ -8,6 +8,11 @@ img {
   height: auto;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -566,8 +571,12 @@ template {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 
 }
+
+/* Keeps protruding parts of elements hidden if they occur
+  This is useful if you want to use negative margins (e.g. manipulating column layouts)*/
 
 .wrapper--medium {
     max-width: 976px;
@@ -655,4 +664,35 @@ template {
 
 .headline--b-margin-large {
     margin-bottom: 1.6em;
+  }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.row--gutters {
+    margin-right: -65px;
+
+  }
+
+.row--gutters > div {
+    padding-right: 65px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+
+@media (min-width: 900px) {
+
+    .row__medium-4 {
+      float: left; /*When we float elements, they're removed from the normal flow of the page; they must be cleared - use the &::after pseudoclass*/
+      width: 33.33%;
+    }
+
+    .row__medium-8 {
+      float: left;
+      width: 66.66%;
+    }
   }
