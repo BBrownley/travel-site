@@ -566,14 +566,93 @@ template {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
 }
 
+.wrapper--medium {
+    max-width: 976px;
+  }
+
+.wrapper .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 .page-section {
-  padding: 4.5rem 0;
+
+  padding: 1.2rem 0;
 
 }
 
 .page-section--blue {
     background-color: #2f5572;
     color: #FFF;
+  }
+
+@media (min-width: 900px) {
+
+.page-section {
+    padding: 4.5rem 0
+
+}
+  }
+
+.headline {
+  font-weight: 300;
+  font-size: 1.9rem;
+  color: #2f5572;
+
+
+
+}
+
+@media (min-width: 540px) {
+
+.headline { /*Put this in the beginning or it will create undesired effects*/
+    font-size: 2.875rem
+
+
+
+}
+  }
+
+.headline strong {
+    font-weight: 400;
+  }
+
+.headline--centered {
+    text-align: center;
+  }
+
+.headline--orange {
+    color: #d59541;
+  }
+
+.headline--small {
+    font-size: 1.2rem;
+  }
+
+@media (min-width: 540px) {
+
+.headline--small {
+      font-size: 1.875rem
+  }
+  }
+
+.headline--narrow {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.headline--light {
+    font-weight: 100;
+  }
+
+.headline--b-margin-small {
+    margin-bottom: .5em; /*em is relative to the font size of the element itself */
+  }
+
+.headline--b-margin-large {
+    margin-bottom: 1.6em;
   }
