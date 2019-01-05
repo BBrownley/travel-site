@@ -4,11 +4,21 @@
 
   &--gutters {
     margin-right: -65px;
+  }
 
+  &--gutters-large {
+    margin-right: -100px;
   }
 
   &--gutters > div {
     padding-right: 65px;
+    /* &:last-child {         --Wrong! This affects the width ratios!
+      padding-right: 0;
+    } */
+  }
+
+  &--gutters-large > div {
+    padding-right: 100px;
     /* &:last-child {         --Wrong! This affects the width ratios!
       padding-right: 0;
     } */
@@ -42,7 +52,10 @@
       width: 63%;
     }
 
-
+    &__medium-6 {
+      width: 50%;
+      float: left;
+    }
 
   }
 
