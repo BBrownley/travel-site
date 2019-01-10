@@ -30,6 +30,8 @@
 
   @mixin atMedium {
 
+    /* Using a 12 column layout */
+
     &__b-margin-until-medium {
       margin-bottom: 0;
     }
