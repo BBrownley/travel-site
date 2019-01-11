@@ -465,6 +465,16 @@ template {
 }
 /* Keeps protruding parts of elements hidden if they occur
   This is useful if you want to use negative margins (e.g. manipulating column layouts)*/
+.wrapper--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+@media (min-width: 800px) {
+.wrapper--no-padding-until-medium {
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
 .wrapper--medium {
     max-width: 976px;
   }
@@ -495,9 +505,25 @@ template {
 
 }
   }
+.page-section--no-b-padding-until-medium {
+    padding-bottom: 0;
+  }
+@media (min-width: 800px) {
+.page-section--no-b-padding-until-medium {
+      padding-bottom: 4.5rem
+  }
+  }
 .page-section--testimonials {
-    background: url("/assets/images/testimonials-bg.jpg") top center no-repeat; /*top center is how the img is aligned */
-    background-size: cover;
+
+    background-color: #E0E6EF;
+
+  }
+@media (min-width: 800px) {
+.page-section--testimonials {
+      background: url("/assets/images/testimonials-bg.jpg") top center no-repeat; /*top center is how the img is aligned */
+      background-size: cover
+
+  }
   }
 .headline {
   font-weight: 300;
@@ -560,6 +586,9 @@ template {
 .row--gutters-large {
     margin-right: -100px;
   }
+.row--gutters-small {
+    margin-right: -45px;
+  }
 .row--gutters > div {
     padding-right: 65px;
     /* &:last-child {         --Wrong! This affects the width ratios!
@@ -572,8 +601,14 @@ template {
       padding-right: 0;
     } */
   }
+.row--gutters-small > div {
+    padding-right: 45px;
+  }
 .row__b-margin-until-medium {
     margin-bottom: 1rem;
+  }
+.row--t-padding {
+    padding-top: 80px;
   }
 @media (min-width: 800px) {
 .row {
@@ -609,6 +644,19 @@ template {
       float: left;
     }
   }
+@media (min-width: 800px) {
+.row--equal-height-at-medium {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+  }
+  }
+.row--equal-height-at-medium > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 .generic-content-container p {
     font-weight: 300;
     line-height: 1.65;
@@ -693,8 +741,18 @@ template {
   }
 .testimonial {
   background-color: rgba(255, 255, 255, .8);
-  padding: 0 1.8125rem 1px 1.8125rem;
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
 }
+.testimonial--last {
+    margin-bottom: 0;
+  }
+@media (min-width: 800px) {
+.testimonial {
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem
+}
+  }
 .testimonial__photo {
     border-radius: 80px;
     overflow: hidden;

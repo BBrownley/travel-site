@@ -10,6 +10,10 @@
     margin-right: -100px;
   }
 
+  &--gutters-small {
+    margin-right: -45px;
+  }
+
   &--gutters > div {
     padding-right: 65px;
     /* &:last-child {         --Wrong! This affects the width ratios!
@@ -24,8 +28,16 @@
     } */
   }
 
+  &--gutters-small > div {
+    padding-right: 45px;
+  }
+
   &__b-margin-until-medium {
     margin-bottom: 1rem;
+  }
+
+  &--t-padding {
+    padding-top: 80px;
   }
 
   @mixin atMedium {
@@ -59,6 +71,16 @@
       float: left;
     }
 
+  }
+
+  &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+    & > div {
+      float: none;
+      display: flex;
+    }
   }
 
 }

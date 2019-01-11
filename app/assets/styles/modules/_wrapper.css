@@ -7,6 +7,15 @@
   overflow: hidden; /* Keeps protruding parts of elements hidden if they occur
   This is useful if you want to use negative margins (e.g. manipulating column layouts)*/
 
+  &--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+    @mixin atMedium {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
   &--medium {
     max-width: 976px;
   }
