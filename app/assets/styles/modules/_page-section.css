@@ -19,11 +19,21 @@
     }
   }
 
+  &--no-b-padding-until-medium-large {
+
+    padding-bottom: 0;
+
+    @mixin atMediumLarge {
+      padding-bottom: 4.5rem;
+    }
+
+  }
+
   &--testimonials {
 
     background-color: #E0E6EF;
 
-    @mixin atMedium {
+    @mixin atMediumLarge {
       background: url("/assets/images/testimonials-bg.jpg") top center no-repeat; /*top center is how the img is aligned */
       background-size: cover;
     }

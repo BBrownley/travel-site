@@ -478,6 +478,19 @@ template {
 .wrapper--medium {
     max-width: 976px;
   }
+.wrapper--no-padding-until-medium-large {
+    padding-left: 0;
+    padding-right: 0;
+  }
+@media (min-width: 1000px) {
+.wrapper--no-padding-until-medium-large {
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+.wrapper--medium-large {
+    max-width: 976px;
+  }
 .wrapper--b-margin {
     margin-bottom: 1rem;
   }
@@ -513,12 +526,23 @@ template {
       padding-bottom: 4.5rem
   }
   }
+.page-section--no-b-padding-until-medium-large {
+
+    padding-bottom: 0;
+
+  }
+@media (min-width: 1000px) {
+.page-section--no-b-padding-until-medium-large {
+      padding-bottom: 4.5rem
+
+  }
+  }
 .page-section--testimonials {
 
     background-color: #E0E6EF;
 
   }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 .page-section--testimonials {
       background: url("/assets/images/testimonials-bg.jpg") top center no-repeat; /*top center is how the img is aligned */
       background-size: cover
@@ -657,6 +681,53 @@ template {
       display: -ms-flexbox;
       display: flex;
     }
+@media (min-width: 1000px) {
+.row {
+
+    /* Using a 12 column layout */
+
+}
+
+    .row__b-margin-until-medium-large {
+      margin-bottom: 0;
+    }
+
+    .row__medium-large-4 {
+      float: left; /*When we float elements, they're removed from the normal flow of the page; they must be cleared - use the &::after pseudoclass*/
+      width: 33.33%;
+    }
+
+    .row__medium-large-4--larger {
+      width: 37%;
+    }
+
+    .row__medium-large-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    .row__medium-large-8--smaller {
+      width: 63%;
+    }
+
+    .row__medium-large-6 {
+      width: 50%;
+      float: left;
+    }
+  }
+@media (min-width: 1000px) {
+.row--equal-height-at-medium-large {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+  }
+  }
+.row--equal-height-at-medium-large > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 .generic-content-container p {
     font-weight: 300;
     line-height: 1.65;
@@ -747,8 +818,9 @@ template {
 .testimonial--last {
     margin-bottom: 0;
   }
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 .testimonial {
+
     margin-bottom: 0;
     padding: 0 1.8125rem 1px 1.8125rem
 }
