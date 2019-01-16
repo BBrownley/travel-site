@@ -7,7 +7,7 @@ const cssImport = require('postcss-import');
 const mixins = require("postcss-mixins");
 
 gulp.task("styles", function() {
-  
+
   //enter gulp css to use this task
 
   //Be careful how these lines are spaced out - It could cause errors
